@@ -1,0 +1,58 @@
+@use '../var';
+
+.showModal {
+    color: white;
+    background-color: transparent;
+    border: thin white solid;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem 2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.showModal:hover {
+    background-color: white;
+    background-clip: text;
+    color: var.$Dark-Text;
+}
+
+.modalGroup {
+    font-weight: 600;
+    font-size: 30px;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s;
+    top: -100vh;
+    padding: 2rem;
+}
+
+.modalGroup__heading {
+    z-index: 10;
+    color: var.$Dark-Text;
+}
+
+.modalGroup__img{
+    max-width: 100%;
+    height: auto;
+}
+
+.modalGroup__icon {
+    width: 10%;
+    height: auto;
+    fill: var.$Dark-Text;
+    cursor: pointer;
+}
+
+.modalGroup.active {
+    top: 0vh;
+}
