@@ -7,6 +7,7 @@
     align-items: center;
     text-align: center;
     height: auto;
+    transition: .2s all ease-in-out;
 }
 
 .wrapper {
@@ -16,11 +17,10 @@
     flex-direction: column;
     position: relative;
     z-index: 10;
-    transition: .2s all ease-in-out;
     cursor: pointer;
 }
 
-.wrapper:hover {
+.option:hover {
     transform: scale(1.2);
 }
 
@@ -34,7 +34,6 @@
     box-shadow: 0px 5px hsl(0, 0%, 80%) inset;
     position: static;
     z-index: 10;
-    cursor: pointer;
 }
 
 

@@ -55,18 +55,31 @@
     }
 
     .header{
-        // margin-top: 2.55rem;
-        // padding: 1.06rem 1.45rem;
-        // border-radius:13px;
         align-items: stretch;
     }
 
     .logoContainer {
         flex-basis: 20%;
-        border: 1px black solid;
     }
 
     .logo {
         max-width: 100%;
+    }
+
+    .scoreGroup {
+        flex-basis: 23%;
+        padding-top: 1rem;
+        gap: .16rem;
+        border-radius: 10px;
+
+    }
+
+    .scoreGroup__text{
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .scoreGroup__score{
+        font-size: 55px;
     }
 }
