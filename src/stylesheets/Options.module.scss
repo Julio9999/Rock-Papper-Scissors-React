@@ -1,3 +1,9 @@
+@use '../var';
+
+.container {
+    height: 20.717rem;
+}
+
 .options {
     display: grid;
     user-select: none;
@@ -10,30 +16,65 @@
     background-position: center center;
     transition: all .2s ease;
     width: 17.438rem;
-    height:20.717rem;
+    height: auto;
     column-gap: 2.5rem;
+    row-gap: 1.5rem;
 }
 
-.noBackground{
+.noBackground {
     background-image: none;
 }
 
-.noBackground > * {
+.noBackground>* {
     grid-column: auto !important;
     justify-self: auto !important;
 }
 
-.noBackground > *:hover{
+.noBackground>*:hover {
     transform: none !important;
 }
 
-.result{
-    background-color: black;
-    color: white;
+.hidden{
+    visibility: hidden;
+    border: 10px red solid;
+}
+
+.result-group {
+    text-align: center;
+    grid-column: -3/-1;
+    padding-top: 3rem;
+}
+
+.result-group__text {
+    display: block;
+    font-size: 55px;
+    margin-bottom: 1rem;
+    height: 100%;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 700;
+}
+
+.result-group__button {
+    border: none;
+    color: var.$Dark-Text;
+    height: 3rem;
+    width: 10rem;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.result-group__button:hover {
+    color: red;
 }
 
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 900px) {
     .options {
         width: 25rem;
         position: relative;
