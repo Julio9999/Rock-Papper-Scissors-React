@@ -78,11 +78,21 @@
     .options {
         width: 25rem;
         position: relative;
-        // column-gap: 3.5rem;
-        row-gap: 0rem;
-        background-size: 70%;
-        // margin-top: 2.5rem;
-        height: 28.299rem;
-        border: 1px black solid;
+        column-gap: 3.5rem;
+        row-gap: 1rem;
+        background-size: 60%;
+        margin-top: 2.5rem;
+        height: 20.299rem;
+        margin-top: 0;
+        column-gap: 5rem;
+        height: auto;
+    }
+    
+    .result-group {
+        position: absolute;
+        padding: 0;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

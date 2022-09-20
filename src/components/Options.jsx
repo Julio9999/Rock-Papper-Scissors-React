@@ -2,7 +2,7 @@ import styles from "../stylesheets/Options.module.scss";
 import { Option } from "../components/Option";
 import { useEffect, useState } from "react";
 
-export function Options(){
+export function Options(props){
     const items = [{element:"scissors", listen: true, beats : ['papper', 'lizard'], win:''},
     {element:"spock", listen:true, beats : ['scissors', 'rock'], win:''},
     {element:"papper", listen:true, beats : ['rock', 'spock'], win:''},
@@ -11,6 +11,7 @@ export function Options(){
     const [result, setResult] = useState('');
     const [options, setOptions] = useState(items);
     const [background, setBackground] = useState(true);
+    //const classes = ['option--1', 'option--2', 'option--3', 'option--4']
 
     function handleClick(e){
         let beats = [];
@@ -52,29 +53,28 @@ export function Options(){
             }
         })
 
+        props.handleScore(result);
+
         return result;
     }
 
     useEffect(()=>{
-
-        if(options.length === 2){
-            console.log('hola')
+        if(options.length === 2 && options[0].win === ''){
             setTimeout(()=>{
-                let option1 = options[0],
-                option2 = options[1];
+                let option1 = options[0]
                 let result = calc(options[0], options[1]);
                 if(result === 'YOU WIN'){
                     option1.win = true;
-                }else if (result === 'YOU LOSE'){
-                    option2.win = true;
+                }else if(result === 'YOU LOSE'){
+                    option1.win = false;
                 }else{
-                    option1.win = 'tie';
+                    option1.win = 'TIE';
                 }
-                //setOptions([option1, option2]);
+                setOptions([option1, options[1]])
                 setResult(result);
             }, 500)
         }
-    }, [options])
+    })
 
 
     if(result === ''){
@@ -82,7 +82,7 @@ export function Options(){
         <div className={styles.container}>
             <section className={background ? styles.options: `${styles.options} ${styles.noBackground}`}>
                 {
-                    options.map((option,index) => <Option key={index} option={option} handleClick={handleClick}/>)
+                    options.map((option,index) => <Option key={index} clase={'option--'+(index+1)} option={option} handleClick={handleClick}/>)
                 }
             </section>
         </div>
@@ -92,7 +92,7 @@ export function Options(){
         <div className={styles.container}>
                 <section className={background ? styles.options: `${styles.options} ${styles.noBackground}`}>
                 {
-                    options.map((option,index) => <Option key={index} option={option} handleClick={handleClick}/>)
+                    options.map((option,index) => <Option key={index}   option={option} index={index} handleClick={handleClick}/>)
                 }
                 </section>
             <div className={styles["result-group"]}>
