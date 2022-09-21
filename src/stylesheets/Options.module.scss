@@ -1,8 +1,8 @@
 @use '../var';
-
-.container {
-    height: 20.717rem;
+.container{
+    height: 18rem;
 }
+
 
 .options {
     display: grid;
@@ -75,17 +75,19 @@
 
 
 @media screen and (min-width: 900px) {
+
+    .container{
+        height: 26.5rem;
+    }
     .options {
         width: 25rem;
         position: relative;
         column-gap: 3.5rem;
         row-gap: 1rem;
-        background-size: 60%;
+        background-size: 80%;
         margin-top: 2.5rem;
-        height: 20.299rem;
-        margin-top: 0;
-        column-gap: 5rem;
-        height: auto;
+        margin-top: 2rem;
+        column-gap: 3rem;
     }
     
     .result-group {

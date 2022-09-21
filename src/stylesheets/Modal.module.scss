@@ -12,6 +12,7 @@
     cursor: pointer;
     transition: .2s all ease-in-out;
     margin-top: 1rem;
+    display: block;
 }
 
 .showModal:hover {
@@ -59,3 +60,8 @@
 }
 
 
+@media screen and (min-width: 900px){
+    .showModal{
+        margin-right: 2rem;
+    }
+}

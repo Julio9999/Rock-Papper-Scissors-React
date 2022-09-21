@@ -11,7 +11,6 @@ export function Options(props){
     const [result, setResult] = useState('');
     const [options, setOptions] = useState(items);
     const [background, setBackground] = useState(true);
-    //const classes = ['option--1', 'option--2', 'option--3', 'option--4']
 
     function handleClick(e){
         let beats = [];
