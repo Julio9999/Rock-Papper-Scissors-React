@@ -1,34 +1,32 @@
 @use '../var';
-.container{
-    height: 18rem;
-}
-
 
 .options {
     display: grid;
     user-select: none;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    align-items: flex-start;
+    align-items: center;
     background-image: url('https://raw.githubusercontent.com/Julio9999/rock-papper-scissors-master/main/images/bg-pentagon.svg');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center center;
     transition: all .2s ease;
-    width: 17.438rem;
-    height: auto;
+    //width: 17.438rem;
+    //height:20.717rem;
     column-gap: 2.5rem;
-    row-gap: 1.5rem;
+    border: 1px red solid;
 }
 
 .noBackground {
     background-image: none;
 }
 
-.noBackground>* {
-    grid-column: auto !important;
-    justify-self: auto !important;
+.noBackground > *{
+    grid-column:  auto !important;
+    justify-self: center !important;
 }
+
+
 
 .noBackground>*:hover {
     transform: none !important;
@@ -41,8 +39,10 @@
 
 .result-group {
     text-align: center;
-    grid-column: -3/-1;
     padding-top: 3rem;
+    border: 1px blue solid;
+    width: 100%;
+    grid-column: 1 / -1 !important;
 }
 
 .result-group__text {
@@ -76,24 +76,39 @@
 
 @media screen and (min-width: 900px) {
 
-    .container{
-        height: 26.5rem;
-    }
     .options {
-        width: 25rem;
+        width: 30rem;
         position: relative;
         column-gap: 3.5rem;
-        row-gap: 1rem;
-        background-size: 80%;
+        row-gap: 0rem;
+        background-size: 70%;
         margin-top: 2.5rem;
-        margin-top: 2rem;
-        column-gap: 3rem;
+        height: 28.299rem;
     }
-    
+
+
+    .options.active1 {
+        width: auto;
+        gap: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .options.active2 > *{
+        width: 30%;
+    }
+
+    .options.active2 {
+        width: 90%;
+        border: 1px red solid;
+        justify-content: space-between;
+    }
+
     .result-group {
+        //column-gap: 1/-1;
         position: absolute;
         padding: 0;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
