@@ -14,7 +14,7 @@ export function Option(props) {
         );
     } else {
         return(
-            <div className={`${styles.option} ${styles["option-picked"]} ${styles[props.option.element]}`} id={props.option.element} beats={props.option.beats}>
+            <div className={`${styles.option} ${styles["option-picked"]} ${styles[props.option.element]} ${styles["option-choosen"]}`} id={props.option.element} beats={props.option.beats}>
                 <div className={props.option.win === true ? `${styles.wrapper} ${styles["wrapper--winner"]}` : styles.wrapper}>
                     <span className={`${styles.wrapper__item} `}></span>
                 </div>

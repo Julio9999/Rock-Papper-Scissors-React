@@ -36,6 +36,7 @@
     transition: all .5s;
     top: -100vh;
     padding: 2rem;
+    user-select: none;
 }
 
 .modalGroup__heading {
@@ -55,6 +56,10 @@
     cursor: pointer;
 }
 
+.modalGroup__icon_path{
+    color: blue;
+};
+
 .modalGroup.active {
     top: 0vh;
 }
@@ -63,5 +68,23 @@
 @media screen and (min-width: 900px){
     .showModal{
         margin-right: 2rem;
+    }
+
+
+    .modalGroup{
+        width: 30rem;
+        height: auto;
+        border-radius: 2%;
+    }
+
+    .modalGroup.active{
+        top: 10vh;
+    }
+
+    .modalGroup__icon{
+        position: absolute;
+        top: 5vh;
+        right: 3vw;
+        width: 5%;
     }
 }

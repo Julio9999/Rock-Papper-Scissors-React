@@ -75,8 +75,8 @@ export function Options(props) {
 
                 setTimeout(() => {
                     setActive2(true)
-                }, 1000)
-            }, 500)
+                }, 500)
+            }, 1000)
         }
     })
 
@@ -95,10 +95,10 @@ export function Options(props) {
         return (
 
             <section className={background ? styles.options :
-                active2 ? `${styles.options} ${styles.noBackground} ${styles.active1} ${styles.active2}` :
-            `${styles.options} ${styles.noBackground} ${styles.active1}`}>
+                active2 ? `${styles.options} ${styles.noBackground}  ${styles.active2}` :
+            `${styles.options} ${styles.noBackground}`}>
                 {
-                    options.map((option, index) => <Option key={index} option={option} index={index} handleClick={handleClick} 
+                    options.map((option, index) => <Option key={index} option={option} index={index} handleClick={handleClick}
                     background={background} />)
                 }
                 <div className={styles["result-group"]}>
