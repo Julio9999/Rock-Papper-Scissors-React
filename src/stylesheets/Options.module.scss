@@ -5,14 +5,14 @@
     user-select: none;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    align-items: center;
+    align-items: start;
     background-image: url('https://raw.githubusercontent.com/Julio9999/rock-papper-scissors-master/main/images/bg-pentagon.svg');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center center;
     transition: width .6s ease;
     //width: 17.438rem;
-    //height:20.717rem;
+    height:20.717rem;
     column-gap: 2.5rem;
     row-gap: 1rem;
     transition: all .5s ease;

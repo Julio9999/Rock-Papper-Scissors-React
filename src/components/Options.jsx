@@ -73,10 +73,8 @@ export function Options(props) {
                 setOptions([option1, options[1]])
                 setResult(result);
 
-                setTimeout(() => {
-                    setActive2(true)
-                }, 500)
-            }, 1000)
+                setActive2(true)
+            }, 500)
         }
     })
 

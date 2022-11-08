@@ -22,7 +22,7 @@
 }
 
 .option:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .option-choosen:hover{
@@ -171,7 +171,8 @@
     
 
     .option-picked{
-        font-size: 30px;
+        font-size: 28px;
+        min-width: 20rem;
     }
 
     .option--2, .option--3{
@@ -183,8 +184,6 @@
         border-radius: 50%;
         z-index: 5;
     }
-    
-    
     .wrapper--winner::before {
         content: '';
         width: 100%;
